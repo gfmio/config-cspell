@@ -1,0 +1,77 @@
+# Common Technology Terms
+# One word per line, case-insensitive
+
+# Version Control
+repos
+repo
+gitignore
+uncommit
+uncommitted
+unstage
+unstaged
+
+# DevOps & CI/CD
+devops
+cicd
+dockerfile
+kubernetes
+kubectl
+terraform
+ansible
+jenkins
+
+# Package Managers & Build Tools
+webpack
+rollup
+vite
+turbopack
+esbuild
+tsup
+unbuild
+parcel
+
+# Testing
+unmock
+unmocked
+testable
+
+# Common Abbreviations
+config
+configs
+auth
+utils
+util
+
+# Data Formats
+yaml
+toml
+graphql
+
+# Web Technologies
+frontend
+backend
+fullstack
+middleware
+websocket
+websockets
+
+# Development
+refactor
+refactoring
+linter
+linting
+hotfix
+bugfix
+
+# Database
+postgres
+postgresql
+mongodb
+mysql
+redis
+sqlite
+
+# Cloud & Infrastructure
+serverless
+microservice
+microservices

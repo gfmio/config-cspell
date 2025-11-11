@@ -1,14 +1,15 @@
 # @gfmio/config-cspell
 
-Shareable [CSpell](https://cspell.org/) configurations for consistent spell-checking across projects.
+Comprehensive shareable [CSpell](https://cspell.org/) configurations for consistent spell-checking across projects of all types.
 
 ## Features
 
-- **Layered Configuration**: Start with a base config and extend for specific tech stacks
-- **Multiple Presets**: TypeScript, Node.js, React, and Markdown configurations
-- **Custom Dictionaries**: Common technology terms and acronyms included
-- **Optimized Patterns**: Smart ignore patterns for URLs, hashes, emails, and more
-- **Zero Configuration**: Works out of the box with sensible defaults
+- **20+ Specialized Configurations**: Language and framework-specific presets
+- **Layered Architecture**: Build on base configs, extend for specific needs
+- **5 Custom Dictionaries**: Cloud providers, frameworks, databases, tech terms, acronyms
+- **Smart Ignore Patterns**: URLs, hashes, emails, build artifacts
+- **Locale Support**: en-US and en-GB variants
+- **Zero Configuration**: Sensible defaults that work out of the box
 
 ## Installation
 
@@ -16,25 +17,9 @@ Shareable [CSpell](https://cspell.org/) configurations for consistent spell-chec
 npm install --save-dev @gfmio/config-cspell cspell
 ```
 
-## Usage
+## Quick Start
 
-### Base Configuration
-
-For general projects, extend the base configuration:
-
-**`.cspell.json`**:
-
-```json
-{
-  "import": ["@gfmio/config-cspell"]
-}
-```
-
-### TypeScript/JavaScript Projects
-
-For TypeScript or JavaScript projects:
-
-**`.cspell.json`**:
+Create a `.cspell.json` in your project root:
 
 ```json
 {
@@ -42,11 +27,49 @@ For TypeScript or JavaScript projects:
 }
 ```
 
-### Node.js Projects
+That's it! CSpell will now use the TypeScript configuration with all its defaults.
 
-For Node.js backend projects:
+## Available Configurations
 
-**`.cspell.json`**:
+### Core Configurations
+
+#### Base (`@gfmio/config-cspell`)
+
+Foundation configuration that all others extend.
+
+**Includes:**
+
+- Software terms, company names
+- 5 custom dictionaries (tech terms, acronyms, cloud, frameworks, databases)
+- Smart ignore patterns (node_modules, build artifacts, lock files)
+- Regex patterns (hashes, URLs, emails)
+- Minimum word length: 3, max problems: 100
+
+```json
+{
+  "import": ["@gfmio/config-cspell"]
+}
+```
+
+### JavaScript/TypeScript Ecosystem
+
+#### TypeScript/JavaScript (`@gfmio/config-cspell/typescript`)
+
+**Extends:** Base
+**Dictionaries:** TypeScript, Node.js, npm
+**Special handling:** Import/export statements, test files
+
+```json
+{
+  "import": ["@gfmio/config-cspell/typescript"]
+}
+```
+
+#### Node.js (`@gfmio/config-cspell/node`)
+
+**Extends:** TypeScript
+**Additional:** Node.js built-ins, Bash, Docker
+**Ignores:** `.env*` files
 
 ```json
 {
@@ -54,11 +77,11 @@ For Node.js backend projects:
 }
 ```
 
-### React Projects
+#### React (`@gfmio/config-cspell/react`)
 
-For React applications:
-
-**`.cspell.json`**:
+**Extends:** TypeScript
+**Dictionaries:** HTML, CSS, fonts
+**Includes:** React hooks, JSX terms, CSS module support
 
 ```json
 {
@@ -66,11 +89,137 @@ For React applications:
 }
 ```
 
-### Markdown/Documentation
+#### Next.js (`@gfmio/config-cspell/nextjs`)
 
-For documentation-heavy projects:
+**Extends:** React
+**Includes:** Next.js API routes, SSR/SSG terms, app router
 
-**`.cspell.json`**:
+```json
+{
+  "import": ["@gfmio/config-cspell/nextjs"]
+}
+```
+
+#### Vue.js (`@gfmio/config-cspell/vue`)
+
+**Extends:** TypeScript
+**Includes:** Vue 3 composition API, Nuxt, Vite, popular Vue libraries
+
+```json
+{
+  "import": ["@gfmio/config-cspell/vue"]
+}
+```
+
+#### Angular (`@gfmio/config-cspell/angular`)
+
+**Extends:** TypeScript
+**Includes:** Angular decorators, RxJS, NgRx, component/service patterns
+
+```json
+{
+  "import": ["@gfmio/config-cspell/angular"]
+}
+```
+
+#### Svelte (`@gfmio/config-cspell/svelte`)
+
+**Extends:** TypeScript
+**Includes:** SvelteKit, stores, lifecycle methods
+
+```json
+{
+  "import": ["@gfmio/config-cspell/svelte"]
+}
+```
+
+### Backend Languages
+
+#### Python (`@gfmio/config-cspell/python`)
+
+**Extends:** Base
+**Dictionaries:** Python, Django
+**Includes:** pytest, FastAPI, Flask, SQLAlchemy, common tools
+**Ignores:** `__pycache__`, `.pytest_cache`, virtualenv directories
+
+```json
+{
+  "import": ["@gfmio/config-cspell/python"]
+}
+```
+
+#### Go (`@gfmio/config-cspell/go`)
+
+**Extends:** Base
+**Dictionaries:** Golang
+**Includes:** Go tooling, popular frameworks, test utilities
+**Ignores:** `vendor/`
+
+```json
+{
+  "import": ["@gfmio/config-cspell/go"]
+}
+```
+
+#### Rust (`@gfmio/config-cspell/rust`)
+
+**Extends:** Base
+**Dictionaries:** Rust
+**Includes:** Cargo, popular crates (tokio, serde, actix)
+**Ignores:** `target/`
+
+```json
+{
+  "import": ["@gfmio/config-cspell/rust"]
+}
+```
+
+#### Java/Kotlin (`@gfmio/config-cspell/java`)
+
+**Extends:** Base
+**Dictionaries:** Java
+**Includes:** Spring Boot, Maven, Gradle, JUnit, Lombok
+**Ignores:** `target/`, `build/`, `.gradle/`
+
+```json
+{
+  "import": ["@gfmio/config-cspell/java"]
+}
+```
+
+#### C/C++ (`@gfmio/config-cspell/cpp`)
+
+**Extends:** Base
+**Dictionaries:** C, C++
+**Includes:** STL, CMake, common libraries
+**Ignores:** Build artifacts
+
+```json
+{
+  "import": ["@gfmio/config-cspell/cpp"]
+}
+```
+
+### Styling & Markup
+
+#### CSS/SCSS (`@gfmio/config-cspell/css`)
+
+**Extends:** Base
+**Dictionaries:** CSS, fonts
+**Includes:** PostCSS, Tailwind, preprocessors
+
+```json
+{
+  "import": ["@gfmio/config-cspell/css"]
+}
+```
+
+#### Markdown (`@gfmio/config-cspell/markdown`)
+
+**Extends:** Base
+**Dictionaries:** English
+**Ignores:** Code blocks, links, HTML
+**Special handling:** README, CHANGELOG, CONTRIBUTING
 
 ```json
 {
@@ -78,9 +227,98 @@ For documentation-heavy projects:
 }
 ```
 
-### Combining Configurations
+### Infrastructure & DevOps
 
-You can combine multiple configurations by importing them in order:
+#### Docker (`@gfmio/config-cspell/docker`)
+
+**Extends:** Base
+**Dictionaries:** Docker
+**Includes:** Kubernetes, Helm, container tools
+**Handles:** Dockerfiles, docker-compose, K8s manifests
+
+```json
+{
+  "import": ["@gfmio/config-cspell/docker"]
+}
+```
+
+### Project Types
+
+#### Monorepo (`@gfmio/config-cspell/monorepo`)
+
+**Extends:** TypeScript
+**Includes:** Turborepo, Lerna, pnpm workspaces, changesets
+**Optimized for:** Multi-package repositories
+
+```json
+{
+  "import": ["@gfmio/config-cspell/monorepo"]
+}
+```
+
+### Variants
+
+#### Strict Mode (`@gfmio/config-cspell/strict`)
+
+**Extends:** Base
+**Settings:** Min word length 2, max problems 1000
+**Use case:** Documentation-heavy projects, high-quality standards
+
+```json
+{
+  "import": ["@gfmio/config-cspell/strict"]
+}
+```
+
+#### American English (`@gfmio/config-cspell/en-us`)
+
+**Extends:** Base
+**Enforces:** US spellings (color, organize, analyze)
+**Flags:** British spellings as errors
+
+```json
+{
+  "import": ["@gfmio/config-cspell/en-us"]
+}
+```
+
+#### British English (`@gfmio/config-cspell/en-gb`)
+
+**Extends:** Base
+**Enforces:** UK spellings (colour, organise, analyse)
+**Flags:** American spellings as errors
+
+```json
+{
+  "import": ["@gfmio/config-cspell/en-gb"]
+}
+```
+
+## Custom Dictionaries
+
+### Technology Terms (`dictionaries/common-tech-terms.txt`)
+
+Version control, DevOps tools, build tools, testing, web tech, databases
+
+### Acronyms (`dictionaries/common-acronyms.txt`)
+
+API, CLI, HTTP, JSON, REST, MVC, SPA, TDD, and 60+ more
+
+### Cloud Providers (`dictionaries/cloud-providers.txt`)
+
+AWS, GCP, Azure services and generic cloud terminology
+
+### Frameworks & Libraries (`dictionaries/frameworks-libraries.txt`)
+
+150+ popular packages: Express, React, Vue, Django, Flask, and more
+
+### Databases (`dictionaries/databases.txt`)
+
+RDBMS, NoSQL, key-value stores, search engines, ORMs, message queues
+
+## Usage Examples
+
+### Combining Configurations
 
 ```json
 {
@@ -91,187 +329,107 @@ You can combine multiple configurations by importing them in order:
 }
 ```
 
-### Adding Project-Specific Words
-
-Extend with your own project-specific terms:
+### Override Settings
 
 ```json
 {
   "import": ["@gfmio/config-cspell/typescript"],
+  "minWordLength": 4,
+  "maxNumberOfProblems": 200
+}
+```
+
+### Add Project-Specific Words
+
+```json
+{
+  "import": ["@gfmio/config-cspell/python"],
   "words": [
     "mycompany",
-    "projectname",
-    "customterm"
+    "projectname"
   ]
 }
 ```
 
-## Available Configurations
+### Create Custom Dictionary
 
-### Base (`@gfmio/config-cspell`)
+```json
+{
+  "import": ["@gfmio/config-cspell/node"],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-terms",
+      "path": "./dictionaries/project-terms.txt"
+    }
+  ],
+  "dictionaries": ["project-terms"]
+}
+```
 
-The foundation configuration that all others extend.
+### Combine Locale with Framework
 
-**Includes:**
-
-- Common software terms dictionary
-- Company names dictionary
-- Custom technology terms
-- Common acronyms
-- Smart ignore patterns (node_modules, build artifacts, lock files, etc.)
-- Regex patterns to ignore (hashes, URLs, emails)
-
-**Settings:**
-
-- Minimum word length: 3
-- Maximum problems per file: 100
-- Compound words: disabled
-
-### TypeScript (`@gfmio/config-cspell/typescript`)
-
-Extends base config with TypeScript/JavaScript support.
-
-**Includes:**
-
-- TypeScript dictionary
-- Node.js dictionary
-- npm dictionary
-- Import/export statement ignoring
-- Test file configurations (Jest, Vitest, Mocha)
-
-**Optimized for:**
-
-- `.ts`, `.tsx`, `.js`, `.jsx`, `.mts`, `.cts`, `.mjs`, `.cjs`
-- Type definition files (`.d.ts`)
-- Test files (`*.test.*`, `*.spec.*`, `__tests__/`, `test/`)
-
-### Node.js (`@gfmio/config-cspell/node`)
-
-Extends TypeScript config with Node.js-specific terms.
-
-**Includes:**
-
-- All TypeScript features
-- Node.js built-in terms (`dirname`, `filename`, `argv`, etc.)
-- Bash dictionary
-- Docker dictionary (for Dockerfiles)
-
-**Special handling:**
-
-- Environment files (`.env*`) are disabled
-- Dockerfile support
-
-### React (`@gfmio/config-cspell/react`)
-
-Extends TypeScript config with React support.
-
-**Includes:**
-
-- All TypeScript features
-- HTML dictionary
-- CSS dictionary
-- Font names dictionary
-- React hooks and common terms
-- JSX/TSX support
-
-**Optimized for:**
-
-- React components (`.tsx`, `.jsx`)
-- CSS/SCSS files
-- CSS Modules
-
-### Markdown (`@gfmio/config-cspell/markdown`)
-
-Extends base config for documentation.
-
-**Includes:**
-
-- English dictionaries (en, en-US)
-- Code block ignoring
-- Inline code ignoring
-- Link and image syntax ignoring
-- HTML tag ignoring
-
-**Special handling:**
-
-- README.md: Additional package manager terms
-- CHANGELOG.md: Version number and heading ignoring
-- CONTRIBUTING.md: Repository-related terms
-
-## Custom Dictionaries
-
-This package includes two custom dictionaries:
-
-### Common Technology Terms
-
-Located at `dictionaries/common-tech-terms.txt`, includes:
-
-- Version control terms (repos, gitignore, unstage)
-- DevOps tools (kubernetes, terraform, ansible)
-- Build tools (webpack, vite, esbuild)
-- Testing terms (testable, unmock)
-- Web technologies (frontend, backend, websocket)
-- Databases (postgres, mongodb, redis)
-- Common abbreviations (config, auth, utils)
-
-### Common Acronyms
-
-Located at `dictionaries/common-acronyms.txt`, includes:
-
-- APIs, CLI, SDK, CDN, DNS
-- HTTP, HTTPS, SSL, TLS, TCP, UDP
-- JSON, XML, HTML, CSS, SVG
-- REST, CRUD, CORS, JWT, OAuth
-- MVC, SPA, SSR, SSG
-- TDD, BDD, E2E
-- And many more
+```json
+{
+  "import": [
+    "@gfmio/config-cspell/en-gb",
+    "@gfmio/config-cspell/react"
+  ]
+}
+```
 
 ## Configuration Hierarchy
 
 ```
 cspell.json (base)
-├── typescript.json
-│   ├── node.json
-│   └── react.json
-└── markdown.json
+├── Language/Framework Specific
+│   ├── typescript.json
+│   │   ├── node.json
+│   │   ├── react.json
+│   │   │   └── nextjs.json
+│   │   ├── vue.json
+│   │   ├── angular.json
+│   │   ├── svelte.json
+│   │   └── monorepo.json
+│   ├── python.json
+│   ├── go.json
+│   ├── rust.json
+│   ├── java.json
+│   └── cpp.json
+├── Styling
+│   ├── css.json
+│   └── markdown.json
+├── Infrastructure
+│   └── docker.json
+└── Variants
+    ├── strict.json
+    ├── en-us.json
+    └── en-gb.json
 ```
 
-## Ignored Paths
+## Ignored Paths (All Configs)
 
-All configurations ignore common build artifacts and dependencies:
-
-- `node_modules/`
-- `dist/`, `build/`, `out/`
-- `coverage/`
-- `.git/`, `.vscode/`, `.idea/`
-- Minified files (`*.min.*`)
-- Source maps (`*.map`)
+- `node_modules/`, `dist/`, `build/`, `out/`
+- `coverage/`, `.git/`, `.vscode/`, `.idea/`
+- Minified files (`*.min.*`), source maps
 - Lock files (package-lock.json, yarn.lock, pnpm-lock.yaml)
-- Framework-specific (`.next/`, `.nuxt/`, `.cache/`)
+- Framework cache (`.next/`, `.nuxt/`, `.cache/`)
 
-## Ignored Patterns
+## Ignored Patterns (Regex)
 
-Regex patterns automatically ignored:
-
-- Git commit hashes (7-40 hex characters)
-- Long uppercase identifiers (20+ characters)
+- Git commit hashes (7-40 hex chars)
+- Long uppercase identifiers (20+ chars)
 - URLs (http/https)
 - Email addresses
 
 ## Common Misspellings Flagged
 
-These common typos are always flagged as errors:
-
-- hte → the
-- teh → the
-- recieve → receive
-- seperate → separate
+`hte`, `teh`, `recieve`, `seperate`, and more in strict mode
 
 ## VS Code Integration
 
-This configuration works automatically with the [Code Spell Checker extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
+Works automatically with [Code Spell Checker extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
 
-Add to your `.vscode/extensions.json`:
+Add to `.vscode/extensions.json`:
 
 ```json
 {
@@ -283,22 +441,20 @@ Add to your `.vscode/extensions.json`:
 
 ## CLI Usage
 
-Check spelling across your project:
-
 ```bash
 # Check all files
 npx cspell "**/*"
 
-# Check specific files
+# Check specific directory
 npx cspell "src/**/*.ts"
 
 # Show suggestions
 npx cspell --show-suggestions "**/*"
 
-# Trace a word through dictionaries
+# Trace word resolution
 npx cspell trace <word>
 
-# Show effective configuration
+# Show effective config
 npx cspell --show-config
 ```
 
@@ -308,9 +464,7 @@ npx cspell --show-config
 
 ```yaml
 name: Spell Check
-
 on: [push, pull_request]
-
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
@@ -323,67 +477,60 @@ jobs:
       - run: npx cspell "**/*"
 ```
 
-### Pre-commit Hook
-
-Using [Husky](https://typicode.github.io/husky/):
+### Pre-commit Hook (Husky)
 
 ```json
 {
   "husky": {
     "hooks": {
-      "pre-commit": "npx cspell --no-progress '{src,tests}/**/*.{ts,tsx}'"
+      "pre-commit": "npx cspell --no-progress '{src,tests}/**/*'"
     }
   }
 }
 ```
 
-## Customization
+## Real-World Examples
 
-### Override Settings
+### Full-Stack TypeScript Monorepo
 
 ```json
 {
-  "import": ["@gfmio/config-cspell/typescript"],
-  "minWordLength": 4,
-  "maxNumberOfProblems": 200,
-  "allowCompoundWords": true
+  "import": [
+    "@gfmio/config-cspell/monorepo",
+    "@gfmio/config-cspell/nextjs",
+    "@gfmio/config-cspell/docker"
+  ]
 }
 ```
 
-### Add Custom Dictionaries
+### Python Data Science Project
 
 ```json
 {
-  "import": ["@gfmio/config-cspell/typescript"],
-  "dictionaryDefinitions": [
-    {
-      "name": "project-terms",
-      "path": "./dictionaries/project-terms.txt"
-    }
-  ],
-  "dictionaries": ["project-terms"]
+  "import": ["@gfmio/config-cspell/python"],
+  "words": ["numpy", "pandas", "sklearn", "jupyter"]
 }
 ```
 
-### Disable Built-in Dictionaries
+### Go Microservice
 
 ```json
 {
-  "import": ["@gfmio/config-cspell/react"],
-  "dictionaries": ["!html"]
+  "import": [
+    "@gfmio/config-cspell/go",
+    "@gfmio/config-cspell/docker"
+  ]
 }
 ```
 
-### Add Language-Specific Settings
+### Documentation Site
 
 ```json
 {
-  "import": ["@gfmio/config-cspell/typescript"],
-  "languageSettings": [
-    {
-      "languageId": "python",
-      "dictionaries": ["python"]
-    }
+  "import": [
+    "@gfmio/config-cspell/strict",
+    "@gfmio/config-cspell/markdown",
+    "@gfmio/config-cspell/en-us"
   ]
 }
 ```
@@ -392,7 +539,7 @@ Using [Husky](https://typicode.github.io/husky/):
 
 ### Config Not Loading
 
-Ensure the package is installed in your `node_modules`:
+Ensure package is installed:
 
 ```bash
 npm install --save-dev @gfmio/config-cspell
@@ -400,14 +547,14 @@ npm install --save-dev @gfmio/config-cspell
 
 ### Too Many False Positives
 
-1. Verify you're using the right configuration for your project type
-2. Add project-specific terms to the `words` array
-3. Adjust `minWordLength` if needed
-4. Use `ignoreWords` for terms you want to ignore
+1. Use the right config for your tech stack
+2. Add project terms to `words` array
+3. Adjust `minWordLength`
+4. Use `ignoreWords` for persistent false positives
 
 ### Custom Dictionary Not Found
 
-Custom dictionaries are relative to the config file. Use explicit paths:
+Paths are relative to config file:
 
 ```json
 {
@@ -422,22 +569,20 @@ Custom dictionaries are relative to the config file. Use explicit paths:
 
 ### Performance Issues
 
-1. Limit the number of enabled dictionaries
+1. Limit enabled dictionaries
 2. Increase `minWordLength`
-3. Add more specific ignore patterns
-4. Use `maxNumberOfProblems` to cap issues per file
+3. Add specific ignore patterns
+4. Use `maxNumberOfProblems` cap
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+Contributions welcome! Please submit issues or PRs.
 
-### Adding Terms
+### Adding Terms to Dictionaries
 
-When adding terms to custom dictionaries:
-
-- Only add well-known, universally accepted terms
+- Only well-known, universally accepted terms
 - Document why the term is needed
-- Keep terms organized by category
+- Keep organized by category
 - Use lowercase for case-insensitive terms
 
 ## License
@@ -447,18 +592,32 @@ MIT
 ## Links
 
 - [CSpell Documentation](https://cspell.org/)
-- [CSpell Configuration Reference](https://cspell.org/configuration/)
+- [Configuration Reference](https://cspell.org/configuration/)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [GitHub Repository](https://github.com/gfmio/config-cspell)
+- [npm Package](https://www.npmjs.com/package/@gfmio/config-cspell)
 
-## Version History
+## Configuration Matrix
 
-### 1.0.0
-
-- Initial release
-- Base configuration
-- TypeScript/JavaScript support
-- Node.js support
-- React support
-- Markdown support
-- Custom dictionaries for tech terms and acronyms
+| Config | Extends | Primary Use Case |
+|--------|---------|------------------|
+| `base` | - | All projects |
+| `typescript` | base | TypeScript/JavaScript |
+| `node` | typescript | Node.js backends |
+| `react` | typescript | React apps |
+| `nextjs` | react | Next.js apps |
+| `vue` | typescript | Vue.js apps |
+| `angular` | typescript | Angular apps |
+| `svelte` | typescript | Svelte apps |
+| `python` | base | Python projects |
+| `go` | base | Go projects |
+| `rust` | base | Rust projects |
+| `java` | base | Java/Kotlin projects |
+| `cpp` | base | C/C++ projects |
+| `css` | base | Stylesheets |
+| `markdown` | base | Documentation |
+| `docker` | base | Containers/K8s |
+| `monorepo` | typescript | Multi-package repos |
+| `strict` | base | High standards |
+| `en-us` | base | American English |
+| `en-gb` | base | British English |

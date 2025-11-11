@@ -1,0 +1,51 @@
+# Cloud Provider Services and Terms
+# One word per line, case-sensitive when appropriate
+
+# AWS Services
+autoscaling
+cloudformation
+cloudfront
+cloudtrail
+cloudwatch
+cognito
+dynamodb
+fargate
+kinesis
+lambda
+lambdas
+lightsail
+rds
+redshift
+route53
+s3
+ses
+sns
+sqs
+vpc
+vpcs
+
+# GCP Services
+bigquery
+bigtable
+cloudrun
+dataflow
+dataproc
+datastore
+firestore
+pubsub
+spanner
+
+# Azure Services
+cosmosdb
+devops
+appservice
+functionapp
+blobstorage
+
+# Generic Cloud Terms
+iaas
+paas
+saas
+baas
+faas
+multicloud

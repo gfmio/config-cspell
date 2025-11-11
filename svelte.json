@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Svelte projects",
+  "import": ["./typescript.json"],
+  "dictionaries": [
+    "html",
+    "css",
+    "fonts",
+    "svelte"
+  ],
+  "words": [
+    "sveltekit",
+    "vite",
+    "writable",
+    "readable",
+    "derived",
+    "tweened",
+    "spring",
+    "onMount",
+    "onDestroy",
+    "beforeUpdate",
+    "afterUpdate",
+    "setContext",
+    "getContext",
+    "createEventDispatcher",
+    "afterNavigate",
+    "beforeNavigate",
+    "invalidate",
+    "invalidateAll",
+    "preloadData",
+    "goto"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "svelte",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css",
+        "svelte"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.svelte",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css",
+        "svelte"
+      ]
+    },
+    {
+      "filename": "**/svelte.config.js",
+      "words": ["sveltekit", "vite", "preprocess"]
+    },
+    {
+      "filename": "**/+page.svelte",
+      "words": ["sveltekit"]
+    },
+    {
+      "filename": "**/+page.ts",
+      "words": ["sveltekit", "PageLoad"]
+    },
+    {
+      "filename": "**/+page.server.ts",
+      "words": ["sveltekit", "PageServerLoad"]
+    },
+    {
+      "filename": "**/+layout.svelte",
+      "words": ["sveltekit"]
+    },
+    {
+      "filename": "**/+layout.ts",
+      "words": ["sveltekit", "LayoutLoad"]
+    },
+    {
+      "filename": "**/+layout.server.ts",
+      "words": ["sveltekit", "LayoutServerLoad"]
+    },
+    {
+      "filename": "**/+server.ts",
+      "words": ["sveltekit", "RequestHandler"]
+    }
+  ],
+  "ignorePaths": [
+    "**/.svelte-kit/**"
+  ]
+}

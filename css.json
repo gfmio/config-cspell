@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for CSS/SCSS/SASS/Less projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "css",
+    "fonts"
+  ],
+  "words": [
+    "autoprefixer",
+    "postcss",
+    "tailwindcss",
+    "sass",
+    "scss",
+    "preprocessor",
+    "mixin",
+    "mixins",
+    "rgba",
+    "hsla",
+    "calc",
+    "clamp",
+    "minmax",
+    "flexbox",
+    "webkit",
+    "moz",
+    "keyframes",
+    "viewport",
+    "breakpoint",
+    "breakpoints",
+    "rems",
+    "ems"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "css,scss,sass,less",
+      "dictionaries": ["css", "fonts"]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.css",
+      "dictionaries": ["css", "fonts"]
+    },
+    {
+      "filename": "**/*.scss",
+      "dictionaries": ["css", "fonts"],
+      "words": ["sass", "scss", "mixin", "mixins"]
+    },
+    {
+      "filename": "**/*.sass",
+      "dictionaries": ["css", "fonts"],
+      "words": ["sass", "mixin", "mixins"]
+    },
+    {
+      "filename": "**/*.less",
+      "dictionaries": ["css", "fonts"],
+      "words": ["less", "mixin", "mixins"]
+    },
+    {
+      "filename": "**/tailwind.config.{js,ts,cjs,mjs}",
+      "words": ["tailwindcss", "tailwind"]
+    },
+    {
+      "filename": "**/postcss.config.{js,ts,cjs,mjs}",
+      "words": ["postcss"]
+    }
+  ]
+}

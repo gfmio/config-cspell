@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for C/C++ projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "cpp",
+    "c"
+  ],
+  "words": [
+    "ifndef",
+    "endif",
+    "ifdef",
+    "pragma",
+    "nullptr",
+    "constexpr",
+    "noexcept",
+    "typename",
+    "nullptr",
+    "cout",
+    "cin",
+    "cerr",
+    "endl",
+    "std",
+    "iostream",
+    "fstream",
+    "sstream",
+    "vector",
+    "string",
+    "malloc",
+    "calloc",
+    "realloc",
+    "free",
+    "printf",
+    "scanf",
+    "sprintf",
+    "fprintf",
+    "cmake",
+    "makefile",
+    "gtest",
+    "googletest",
+    "boost",
+    "eigen",
+    "opencv",
+    "pthread",
+    "mutex",
+    "thread"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "c,cpp",
+      "dictionaries": ["cpp", "c"],
+      "ignoreRegExpList": [
+        "/^\\s*\\/\\/.*$/gm",
+        "/^\\s*#include\\s+[<\"].*[>\"]$/gm",
+        "/^\\s*#define\\s+/gm"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.{c,h}",
+      "dictionaries": ["c"]
+    },
+    {
+      "filename": "**/*.{cpp,cc,cxx,hpp,hh,hxx}",
+      "dictionaries": ["cpp", "c"]
+    },
+    {
+      "filename": "**/CMakeLists.txt",
+      "enabled": true,
+      "words": ["cmake"]
+    },
+    {
+      "filename": "**/Makefile",
+      "enabled": true,
+      "words": ["makefile"]
+    },
+    {
+      "filename": "**/*.cmake",
+      "enabled": true,
+      "words": ["cmake"]
+    }
+  ],
+  "ignorePaths": [
+    "**/build/**",
+    "**/out/**",
+    "**/*.o",
+    "**/*.a",
+    "**/*.so",
+    "**/*.dylib",
+    "**/*.dll"
+  ]
+}

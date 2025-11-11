@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for monorepo projects",
+  "import": ["./typescript.json"],
+  "words": [
+    "monorepo",
+    "turborepo",
+    "turbo",
+    "lerna",
+    "pnpm",
+    "workspaces",
+    "changesets",
+    "changeset",
+    "verdaccio",
+    "syncpack",
+    "manypkg"
+  ],
+  "overrides": [
+    {
+      "filename": "**/turbo.json",
+      "enabled": true,
+      "words": ["turborepo", "turbo", "pipeline"]
+    },
+    {
+      "filename": "**/lerna.json",
+      "enabled": true,
+      "words": ["lerna"]
+    },
+    {
+      "filename": "**/pnpm-workspace.yaml",
+      "enabled": true,
+      "words": ["pnpm", "workspaces"]
+    },
+    {
+      "filename": "**/.changeset/*.md",
+      "enabled": true,
+      "words": ["changeset", "changesets"]
+    },
+    {
+      "filename": "**/apps/**",
+      "enabled": true
+    },
+    {
+      "filename": "**/packages/**",
+      "enabled": true
+    }
+  ],
+  "ignorePaths": [
+    "**/apps/**/node_modules/**",
+    "**/packages/**/node_modules/**",
+    "**/apps/**/dist/**",
+    "**/packages/**/dist/**",
+    "**/apps/**/build/**",
+    "**/packages/**/build/**"
+  ]
+}

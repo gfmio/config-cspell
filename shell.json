@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Shell/Bash scripts",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "bash"
+  ],
+  "words": [
+    "shebang",
+    "bashrc",
+    "zshrc",
+    "shellcheck",
+    "shfmt",
+    "grep",
+    "sed",
+    "awk",
+    "xargs",
+    "stdout",
+    "stderr",
+    "stdin",
+    "chmod",
+    "chown",
+    "mkdir",
+    "rmdir",
+    "dirname",
+    "basename",
+    "readlink",
+    "getcwd",
+    "pushd",
+    "popd",
+    "nohup",
+    "sudo",
+    "apt",
+    "yum",
+    "dnf",
+    "brew",
+    "pacman"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "shellscript,bash,sh,zsh",
+      "dictionaries": ["bash"],
+      "ignoreRegExpList": [
+        "/^\\s*#.*$/gm",
+        "/\\$\\{[^}]+\\}/g",
+        "/\\$[A-Z_][A-Z0-9_]*/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.{sh,bash,zsh}",
+      "dictionaries": ["bash"]
+    },
+    {
+      "filename": "**/.bashrc",
+      "dictionaries": ["bash"]
+    },
+    {
+      "filename": "**/.zshrc",
+      "dictionaries": ["bash"]
+    },
+    {
+      "filename": "**/Makefile",
+      "dictionaries": ["bash"]
+    },
+    {
+      "filename": "**/*.mk",
+      "dictionaries": ["bash"]
+    }
+  ]
+}

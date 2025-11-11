@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Next.js projects",
+  "import": ["./react.json"],
+  "words": [
+    "nextjs",
+    "getServerSideProps",
+    "getStaticProps",
+    "getStaticPaths",
+    "getInitialProps",
+    "middleware",
+    "rewrites",
+    "redirects",
+    "revalidate",
+    "fallback",
+    "nextconfig",
+    "vercel",
+    "turbopack",
+    "swc"
+  ],
+  "overrides": [
+    {
+      "filename": "**/next.config.{js,mjs,ts}",
+      "words": ["nextconfig", "webpack"]
+    },
+    {
+      "filename": "**/pages/**/*.{tsx,jsx,ts,js}",
+      "words": [
+        "getServerSideProps",
+        "getStaticProps",
+        "getStaticPaths",
+        "getInitialProps"
+      ]
+    },
+    {
+      "filename": "**/app/**/*.{tsx,jsx,ts,js}",
+      "words": ["metadata", "viewport"]
+    },
+    {
+      "filename": "**/middleware.{ts,js}",
+      "words": ["middleware", "NextRequest", "NextResponse"]
+    },
+    {
+      "filename": "**/_app.{tsx,jsx,ts,js}",
+      "words": ["pageProps"]
+    },
+    {
+      "filename": "**/_document.{tsx,jsx,ts,js}",
+      "words": ["Html", "Head", "Main", "NextScript"]
+    }
+  ],
+  "ignorePaths": [
+    "**/.next/**",
+    "**/out/**"
+  ]
+}

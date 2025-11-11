@@ -1,0 +1,72 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Docker and container projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "docker"
+  ],
+  "words": [
+    "dockerfile",
+    "dockerignore",
+    "dockerhub",
+    "buildx",
+    "buildkit",
+    "multistage",
+    "podman",
+    "containerd",
+    "kubectl",
+    "kubernetes",
+    "k8s",
+    "kustomize",
+    "helm",
+    "helmfile",
+    "kube",
+    "kubeconfig",
+    "kubelet",
+    "ingress",
+    "configmap",
+    "secretmap",
+    "daemonset",
+    "statefulset",
+    "replicaset",
+    "namespace",
+    "cronjob",
+    "compose",
+    "swarm",
+    "healthcheck",
+    "readiness",
+    "liveness"
+  ],
+  "overrides": [
+    {
+      "filename": "**/Dockerfile*",
+      "dictionaries": ["docker"],
+      "ignoreRegExpList": [
+        "/^FROM\\s+/gm",
+        "/^RUN\\s+/gm",
+        "/^CMD\\s+/gm",
+        "/^ENTRYPOINT\\s+/gm"
+      ]
+    },
+    {
+      "filename": "**/.dockerignore",
+      "enabled": true
+    },
+    {
+      "filename": "**/docker-compose*.{yml,yaml}",
+      "enabled": true,
+      "words": ["compose"]
+    },
+    {
+      "filename": "**/*.{yml,yaml}",
+      "ignoreRegExpList": [
+        "/apiVersion:/",
+        "/kind:/",
+        "/metadata:/",
+        "/namespace:/",
+        "/labels:/"
+      ]
+    }
+  ]
+}

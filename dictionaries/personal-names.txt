@@ -1,0 +1,10 @@
+# Personal Names and Usernames
+# One per line, case-sensitive
+
+# Username
+gfmio
+
+# Names
+Frédérique
+Frederique
+Mittelstaedt

@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "description": "Base CSpell configuration for all projects",
+  "dictionaries": [
+    "softwareTerms",
+    "companies",
+    "misc",
+    "common-tech-terms",
+    "common-acronyms",
+    "cloud-providers",
+    "frameworks-libraries",
+    "databases"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "common-tech-terms",
+      "path": "./dictionaries/common-tech-terms.txt",
+      "description": "Common technology terms used across projects"
+    },
+    {
+      "name": "common-acronyms",
+      "path": "./dictionaries/common-acronyms.txt",
+      "description": "Common technical acronyms"
+    },
+    {
+      "name": "cloud-providers",
+      "path": "./dictionaries/cloud-providers.txt",
+      "description": "Cloud provider services (AWS, GCP, Azure)"
+    },
+    {
+      "name": "frameworks-libraries",
+      "path": "./dictionaries/frameworks-libraries.txt",
+      "description": "Popular frameworks and libraries"
+    },
+    {
+      "name": "databases",
+      "path": "./dictionaries/databases.txt",
+      "description": "Database systems and related terms"
+    },
+    {
+      "name": "personal-names",
+      "path": "./dictionaries/personal-names.txt",
+      "description": "Personal names and usernames",
+      "noSuggest": true
+    }
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "out/**",
+    "coverage/**",
+    ".git/**",
+    ".vscode/**",
+    ".idea/**",
+    "*.min.*",
+    "*.map",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "bun.lock",
+    "*.lock",
+    "*.log",
+    ".next/**",
+    ".nuxt/**",
+    ".cache/**",
+    "public/build/**",
+    "*.tsbuildinfo",
+    ".devenv/**",
+    ".direnv/**",
+    ".task/**"
+  ],
+  "ignoreRegExpList": [
+    "/\\b[0-9a-f]{7,40}\\b/gi",
+    "/\\b[A-Z0-9_]{20,}\\b/g",
+    "/https?:\\/\\/[^\\s]+/g",
+    "/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g",
+    "/```[\\s\\S]*?```/g",
+    "/@[a-z]+/g",
+    "/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/gi",
+    "/[A-Za-z0-9+/]{40,}={0,2}/g",
+    "/\\b\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}/g",
+    "/\\bv?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/gi"
+  ],
+  "minWordLength": 3,
+  "allowCompoundWords": false,
+  "maxNumberOfProblems": 100,
+  "words": [],
+  "ignoreWords": [],
+  "flagWords": [
+    "hte",
+    "teh",
+    "recieve",
+    "seperate"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Complete CSpell configuration with all dictionaries enabled",
+  "import": ["./cspell.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "web3-blockchain",
+      "path": "./dictionaries/web3-blockchain.txt",
+      "description": "Web3 and blockchain terminology"
+    }
+  ],
+  "dictionaries": [
+    "web3-blockchain",
+    "typescript",
+    "javascript",
+    "node",
+    "npm",
+    "python",
+    "django",
+    "golang",
+    "rust",
+    "java",
+    "php",
+    "cpp",
+    "c",
+    "sql",
+    "postgres",
+    "bash",
+    "docker",
+    "html",
+    "css",
+    "fonts",
+    "vue",
+    "svelte"
+  ],
+  "comments": [
+    "This configuration enables ALL available dictionaries for maximum term coverage.",
+    "Unlike language-specific configs, this doesn't set up language-specific rules,",
+    "but ensures that terms from any ecosystem are recognized.",
+    "",
+    "Useful for:",
+    "  - Polyglot monorepos with multiple languages",
+    "  - Documentation sites covering various technologies",
+    "  - Learning/reference projects",
+    "  - Projects that use multiple tech stacks",
+    "",
+    "Note: This may result in:",
+    "  - Slightly slower performance (more dictionaries to check)",
+    "  - Some domain-specific jargon accepted across all files",
+    "  - Terms from one language not being flagged in another",
+    "",
+    "For production projects with a specific stack, prefer targeted configs:",
+    "  - @gfmio/config-cspell/recommended (TypeScript + Markdown)",
+    "  - @gfmio/config-cspell/typescript",
+    "  - @gfmio/config-cspell/python",
+    "  - @gfmio/config-cspell/react",
+    "  etc."
+  ]
+}

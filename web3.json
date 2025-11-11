@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Web3 and blockchain projects",
+  "import": ["./typescript.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "web3-blockchain",
+      "path": "./dictionaries/web3-blockchain.txt",
+      "description": "Web3 and blockchain terminology"
+    }
+  ],
+  "dictionaries": [
+    "web3-blockchain"
+  ],
+  "words": [
+    "tokenid",
+    "tokenuri",
+    "msg",
+    "payable",
+    "nonpayable",
+    "calldata",
+    "wei",
+    "gwei",
+    "ether"
+  ]
+}

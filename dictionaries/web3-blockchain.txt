@@ -1,0 +1,95 @@
+# Web3 and Blockchain Terms
+# One word per line
+
+# Blockchain Basics
+blockchain
+blockchains
+cryptocurrency
+cryptocurrencies
+bitcoin
+ethereum
+solidity
+smartcontract
+defi
+dapp
+dapps
+nft
+nfts
+dao
+daos
+
+# Ethereum Ecosystem
+geth
+truffle
+hardhat
+ganache
+metamask
+infura
+alchemy
+etherscan
+uniswap
+opensea
+
+# Consensus & Mining
+proof
+stake
+staking
+validator
+validators
+mining
+miner
+miners
+consensus
+mainnet
+testnet
+rinkeby
+goerli
+sepolia
+
+# Tokens & Standards
+erc20
+erc721
+erc1155
+fungible
+nonfungible
+
+# Web3 Tech
+ipfs
+arweave
+chainlink
+oracles
+multisig
+gnosis
+
+# Layer 2
+polygon
+optimism
+arbitrum
+rollup
+rollups
+sidechain
+
+# Other Blockchains
+polkadot
+cardano
+solana
+avalanche
+cosmos
+binance
+
+# DeFi Terms
+liquidity
+stablecoin
+stablecoins
+aave
+compound
+yearn
+curve
+
+# Development
+remix
+openzeppelin
+wagmi
+ethers
+web3js
+viem

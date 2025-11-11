@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for TypeScript/JavaScript projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "typescript",
+    "node",
+    "npm"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "typescript,javascript,typescriptreact,javascriptreact",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm"
+      ],
+      "ignoreRegExpList": [
+        "/import\\s+.*from\\s+[\"'].*[\"']/g",
+        "/require\\([\"'].*[\"']\\)/g",
+        "/export\\s+.*from\\s+[\"'].*[\"']/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.{ts,tsx,js,jsx,mts,cts,mjs,cjs}",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm"
+      ]
+    },
+    {
+      "filename": "**/*.d.ts",
+      "ignoreRegExpList": [
+        "/declare\\s+module\\s+[\"'].*[\"']/g"
+      ]
+    },
+    {
+      "filename": "**/test/**/*.{ts,tsx,js,jsx}",
+      "words": [
+        "jest",
+        "vitest",
+        "mocha",
+        "chai"
+      ]
+    },
+    {
+      "filename": "**/__tests__/**/*.{ts,tsx,js,jsx}",
+      "words": [
+        "jest",
+        "vitest",
+        "mocha",
+        "chai"
+      ]
+    },
+    {
+      "filename": "**/*.spec.{ts,tsx,js,jsx}",
+      "words": [
+        "jest",
+        "vitest",
+        "mocha",
+        "chai"
+      ]
+    },
+    {
+      "filename": "**/*.test.{ts,tsx,js,jsx}",
+      "words": [
+        "jest",
+        "vitest",
+        "mocha",
+        "chai"
+      ]
+    }
+  ]
+}

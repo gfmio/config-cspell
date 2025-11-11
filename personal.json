@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Personal names configuration (opt-in)",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "personal-names"
+  ]
+}

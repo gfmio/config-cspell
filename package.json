@@ -1,0 +1,98 @@
+{
+  "name": "@gfmio/config-cspell",
+  "version": "0.0.0",
+  "description": "Shareable CSpell configurations for consistent spell-checking across projects",
+  "main": "cspell.json",
+  "exports": {
+    ".": "./cspell.json",
+    "./recommended": "./recommended.json",
+    "./complete": "./complete.json",
+    "./typescript": "./typescript.json",
+    "./node": "./node.json",
+    "./react": "./react.json",
+    "./react-native": "./react-native.json",
+    "./nextjs": "./nextjs.json",
+    "./vue": "./vue.json",
+    "./angular": "./angular.json",
+    "./svelte": "./svelte.json",
+    "./python": "./python.json",
+    "./go": "./go.json",
+    "./rust": "./rust.json",
+    "./java": "./java.json",
+    "./cpp": "./cpp.json",
+    "./php": "./php.json",
+    "./shell": "./shell.json",
+    "./sql": "./sql.json",
+    "./css": "./css.json",
+    "./markdown": "./markdown.json",
+    "./docker": "./docker.json",
+    "./web3": "./web3.json",
+    "./monorepo": "./monorepo.json",
+    "./strict": "./strict.json",
+    "./en-us": "./en-us.json",
+    "./en-gb": "./en-gb.json",
+    "./personal": "./personal.json"
+  },
+  "files": [
+    "*.json",
+    "dictionaries/**/*.txt",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "cspell",
+    "spell-checker",
+    "config",
+    "shareable-config",
+    "typescript",
+    "javascript",
+    "react",
+    "react-native",
+    "vue",
+    "angular",
+    "svelte",
+    "nextjs",
+    "node",
+    "python",
+    "go",
+    "rust",
+    "java",
+    "php",
+    "cpp",
+    "shell",
+    "sql",
+    "web3",
+    "blockchain",
+    "markdown",
+    "docker",
+    "monorepo"
+  ],
+  "author": "gfmio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfmio/config-cspell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gfmio/config-cspell/issues"
+  },
+  "homepage": "https://github.com/gfmio/config-cspell#readme",
+  "packageManager": "bun@1.1.38",
+  "peerDependencies": {
+    "cspell": "^9.3.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.2",
+    "cspell": "^9.3.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "test": "bun run validate && bun run spell-check",
+    "validate": "bun run tests/validate-configs.ts",
+    "spell-check": "cspell --config cspell.json '**/*' --no-progress",
+    "dict-stats": "bun run scripts/dict-stats.ts",
+    "spell-report": "bun run scripts/spell-report.ts",
+    "prepublishOnly": "bun run validate"
+  }
+}

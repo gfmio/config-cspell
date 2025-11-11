@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for React Native projects",
+  "import": ["./react.json"],
+  "words": [
+    "ios",
+    "android",
+    "expo",
+    "metro",
+    "podfile",
+    "cocoapods",
+    "gradle",
+    "fastlane",
+    "xcode",
+    "androidmanifest",
+    "appdelegate",
+    "podspec",
+    "touchableopacity",
+    "touchablehighlight",
+    "touchablewithoutfeedback",
+    "flatlist",
+    "sectionlist",
+    "scrollview",
+    "statusbar",
+    "asyncstorage",
+    "reactnative",
+    "reanimated",
+    "gesturehandler",
+    "safearea",
+    "navigation",
+    "navigationcontainer"
+  ],
+  "overrides": [
+    {
+      "filename": "**/ios/**/*.{h,m,mm,swift}",
+      "dictionaries": ["swift"]
+    },
+    {
+      "filename": "**/android/**/*.{java,kt,kts,gradle}",
+      "dictionaries": ["java"]
+    },
+    {
+      "filename": "**/Podfile",
+      "enabled": true,
+      "words": ["podfile", "cocoapods"]
+    },
+    {
+      "filename": "**/app.json",
+      "enabled": true,
+      "words": ["expo"]
+    },
+    {
+      "filename": "**/metro.config.js",
+      "words": ["metro"]
+    }
+  ],
+  "ignorePaths": [
+    "**/ios/Pods/**",
+    "**/ios/build/**",
+    "**/android/build/**",
+    "**/android/.gradle/**",
+    "**/.expo/**",
+    "**/.expo-shared/**"
+  ]
+}

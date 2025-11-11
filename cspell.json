@@ -18,6 +18,27 @@
       "name": "common-acronyms",
       "path": "./dictionaries/common-acronyms.txt",
       "description": "Common technical acronyms"
+    },
+    {
+      "name": "cloud-providers",
+      "path": "./dictionaries/cloud-providers.txt",
+      "description": "Cloud provider services (AWS, GCP, Azure)"
+    },
+    {
+      "name": "frameworks-libraries",
+      "path": "./dictionaries/frameworks-libraries.txt",
+      "description": "Popular frameworks and libraries"
+    },
+    {
+      "name": "databases",
+      "path": "./dictionaries/databases.txt",
+      "description": "Database systems and related terms"
+    },
+    {
+      "name": "personal-names",
+      "path": "./dictionaries/personal-names.txt",
+      "description": "Personal names and usernames",
+      "noSuggest": true
     }
   ],
   "ignorePaths": [
@@ -34,18 +55,25 @@
     "package-lock.json",
     "yarn.lock",
     "pnpm-lock.yaml",
+    "bun.lock",
+    "*.lock",
     "*.log",
     ".next/**",
     ".nuxt/**",
     ".cache/**",
     "public/build/**",
-    "*.tsbuildinfo"
+    "*.tsbuildinfo",
+    ".devenv/**",
+    ".direnv/**",
+    ".task/**"
   ],
   "ignoreRegExpList": [
     "/\\b[0-9a-f]{7,40}\\b/gi",
     "/\\b[A-Z0-9_]{20,}\\b/g",
     "/https?:\\/\\/[^\\s]+/g",
-    "/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g"
+    "/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g",
+    "/```[\\s\\S]*?```/g",
+    "/@[a-z]+/g"
   ],
   "minWordLength": 3,
   "allowCompoundWords": false,

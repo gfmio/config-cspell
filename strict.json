@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Strict CSpell configuration for documentation and high-quality codebases",
+  "import": ["./cspell.json"],
+  "minWordLength": 2,
+  "maxNumberOfProblems": 1000,
+  "allowCompoundWords": false,
+  "maxDuplicateProblems": 5,
+  "comments": [
+    "Strict mode is designed for documentation-heavy projects and codebases that require",
+    "very high spelling standards. It has lower tolerance for errors and checks more thoroughly."
+  ],
+  "flagWords": [
+    "hte",
+    "teh",
+    "recieve",
+    "seperate",
+    "occured",
+    "untill",
+    "similiar",
+    "usefull",
+    "successfull",
+    "occassion",
+    "acheive",
+    "wierd",
+    "definately",
+    "goverment",
+    "enviroment",
+    "refering",
+    "begining",
+    "occuring",
+    "prefered"
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.md",
+      "minWordLength": 2,
+      "maxNumberOfProblems": 500
+    },
+    {
+      "filename": "**/docs/**/*.md",
+      "minWordLength": 2,
+      "maxNumberOfProblems": 1000
+    },
+    {
+      "filename": "**/*.{ts,tsx,js,jsx}",
+      "minWordLength": 3
+    }
+  ]
+}

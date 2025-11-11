@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Go projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "golang"
+  ],
+  "words": [
+    "gofmt",
+    "golint",
+    "gomod",
+    "gopath",
+    "goroot",
+    "goroutine",
+    "goroutines",
+    "goimports",
+    "godoc",
+    "gotest",
+    "testify",
+    "stretchr",
+    "gorm",
+    "sqlx",
+    "viper",
+    "cobra",
+    "logrus",
+    "zap",
+    "uber",
+    "grpc",
+    "protobuf",
+    "chan",
+    "struct",
+    "iota",
+    "init",
+    "defer",
+    "println",
+    "sprintf",
+    "errorf"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "go",
+      "dictionaries": ["golang"],
+      "ignoreRegExpList": [
+        "/^\\s*\\/\\/.*$/gm",
+        "/import\\s+[\"'].*[\"']/g",
+        "/import\\s+\\(/",
+        "/package\\s+\\w+/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.go",
+      "dictionaries": ["golang"]
+    },
+    {
+      "filename": "**/*_test.go",
+      "words": ["testify", "assert", "require", "suite"]
+    },
+    {
+      "filename": "**/go.mod",
+      "enabled": true
+    },
+    {
+      "filename": "**/go.sum",
+      "enabled": false
+    }
+  ],
+  "ignorePaths": [
+    "**/vendor/**",
+    "**/bin/**"
+  ]
+}

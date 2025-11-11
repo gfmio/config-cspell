@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Rust projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "rust"
+  ],
+  "words": [
+    "rustc",
+    "rustup",
+    "rustfmt",
+    "clippy",
+    "cargo",
+    "crate",
+    "crates",
+    "toml",
+    "impl",
+    "enum",
+    "struct",
+    "trait",
+    "async",
+    "await",
+    "tokio",
+    "serde",
+    "actix",
+    "warp",
+    "axum",
+    "diesel",
+    "sqlx",
+    "println",
+    "dbg",
+    "unwrap",
+    "expect",
+    "Ok",
+    "Err",
+    "Some",
+    "None",
+    "Vec",
+    "HashMap",
+    "HashSet",
+    "String",
+    "str",
+    "usize",
+    "isize",
+    "bool"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "rust",
+      "dictionaries": ["rust"],
+      "ignoreRegExpList": [
+        "/^\\s*\\/\\/.*$/gm",
+        "/use\\s+[\\w:]+/g",
+        "/extern\\s+crate/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.rs",
+      "dictionaries": ["rust"]
+    },
+    {
+      "filename": "**/Cargo.toml",
+      "enabled": true
+    },
+    {
+      "filename": "**/Cargo.lock",
+      "enabled": false
+    }
+  ],
+  "ignorePaths": [
+    "**/target/**"
+  ]
+}

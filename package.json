@@ -8,27 +8,35 @@
     "./typescript": "./typescript.json",
     "./node": "./node.json",
     "./react": "./react.json",
-    "./markdown": "./markdown.json",
+    "./react-native": "./react-native.json",
+    "./nextjs": "./nextjs.json",
+    "./vue": "./vue.json",
+    "./angular": "./angular.json",
+    "./svelte": "./svelte.json",
     "./python": "./python.json",
     "./go": "./go.json",
     "./rust": "./rust.json",
     "./java": "./java.json",
     "./cpp": "./cpp.json",
-    "./vue": "./vue.json",
-    "./angular": "./angular.json",
-    "./nextjs": "./nextjs.json",
-    "./svelte": "./svelte.json",
+    "./php": "./php.json",
+    "./shell": "./shell.json",
+    "./sql": "./sql.json",
+    "./css": "./css.json",
+    "./markdown": "./markdown.json",
+    "./docker": "./docker.json",
+    "./web3": "./web3.json",
     "./monorepo": "./monorepo.json",
     "./strict": "./strict.json",
     "./en-us": "./en-us.json",
     "./en-gb": "./en-gb.json",
-    "./css": "./css.json",
-    "./docker": "./docker.json"
+    "./personal": "./personal.json"
   },
   "files": [
     "*.json",
     "dictionaries/**/*.txt",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "keywords": [
     "cspell",
@@ -38,6 +46,7 @@
     "typescript",
     "javascript",
     "react",
+    "react-native",
     "vue",
     "angular",
     "svelte",
@@ -47,7 +56,12 @@
     "go",
     "rust",
     "java",
+    "php",
     "cpp",
+    "shell",
+    "sql",
+    "web3",
+    "blockchain",
     "markdown",
     "docker",
     "monorepo"
@@ -69,7 +83,11 @@
     "cspell": "^8.0.0"
   },
   "scripts": {
-    "test": "cspell --config cspell.json '**/*'",
-    "lint": "cspell lint --config cspell.json"
+    "test": "npm run validate && npm run spell-check",
+    "validate": "node tests/validate-configs.js",
+    "spell-check": "cspell --config cspell.json '**/*' --no-progress",
+    "dict-stats": "node scripts/dict-stats.js",
+    "spell-report": "node scripts/spell-report.js",
+    "prepublishOnly": "npm run validate"
   }
 }

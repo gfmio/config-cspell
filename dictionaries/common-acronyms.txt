@@ -29,9 +29,16 @@ CRUD
 CORS
 JWT
 OAuth
+SSO
+MFA
+2FA
+SAML
+LDAP
 SMTP
 FTP
 SSH
+CI
+CD
 
 # Development
 IDE

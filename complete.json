@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Complete CSpell configuration with all dictionaries and features enabled",
+  "import": ["./cspell.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "web3-blockchain",
+      "path": "./dictionaries/web3-blockchain.txt",
+      "description": "Web3 and blockchain terminology"
+    }
+  ],
+  "dictionaries": [
+    "web3-blockchain"
+  ],
+  "comments": [
+    "This configuration includes ALL available dictionaries for maximum coverage.",
+    "It's useful for:",
+    "  - Polyglot projects using multiple languages/frameworks",
+    "  - Documentation sites covering various technologies",
+    "  - Learning/reference projects",
+    "",
+    "Note: This may result in slower performance and some false negatives",
+    "if domain-specific terms from multiple ecosystems overlap.",
+    "",
+    "For production projects, prefer specific configs like:",
+    "  - @gfmio/config-cspell/typescript",
+    "  - @gfmio/config-cspell/python",
+    "  - @gfmio/config-cspell/recommended"
+  ]
+}

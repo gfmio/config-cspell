@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Python projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "python",
+    "django"
+  ],
+  "words": [
+    "pytest",
+    "pipenv",
+    "virtualenv",
+    "venv",
+    "pypi",
+    "setuptools",
+    "distutils",
+    "pylint",
+    "mypy",
+    "isort",
+    "autopep",
+    "pydantic",
+    "fastapi",
+    "uvicorn",
+    "gunicorn",
+    "celery",
+    "sqlalchemy",
+    "alembic"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "python",
+      "dictionaries": ["python", "django"],
+      "ignoreRegExpList": [
+        "/^\\s*#.*$/gm",
+        "/import\\s+[\\w.]+/g",
+        "/from\\s+[\\w.]+\\s+import/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.py",
+      "dictionaries": ["python", "django"]
+    },
+    {
+      "filename": "**/test_*.py",
+      "words": ["pytest", "unittest", "mock"]
+    },
+    {
+      "filename": "**/*_test.py",
+      "words": ["pytest", "unittest", "mock"]
+    },
+    {
+      "filename": "**/conftest.py",
+      "words": ["pytest", "fixture"]
+    },
+    {
+      "filename": "**/requirements*.txt",
+      "enabled": true,
+      "words": []
+    },
+    {
+      "filename": "**/Pipfile",
+      "enabled": true
+    },
+    {
+      "filename": "**/setup.py",
+      "words": ["setuptools", "distutils"]
+    },
+    {
+      "filename": "**/pyproject.toml",
+      "enabled": true
+    }
+  ],
+  "ignorePaths": [
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/*.pyd",
+    "**/.pytest_cache/**",
+    "**/.mypy_cache/**",
+    "**/.tox/**",
+    "**/venv/**",
+    "**/.venv/**",
+    "**/env/**",
+    "**/.env/**",
+    "**/virtualenv/**",
+    "**/*.egg-info/**",
+    "**/dist/**",
+    "**/build/**"
+  ]
+}

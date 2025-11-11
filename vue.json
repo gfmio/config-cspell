@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Vue.js projects",
+  "import": ["./typescript.json"],
+  "dictionaries": [
+    "html",
+    "css",
+    "fonts",
+    "vue"
+  ],
+  "words": [
+    "vuex",
+    "pinia",
+    "nuxt",
+    "nuxtjs",
+    "vite",
+    "vitepress",
+    "vetur",
+    "volar",
+    "composable",
+    "composables",
+    "teleport",
+    "suspense",
+    "vuetify",
+    "quasar",
+    "primevue",
+    "vueuse",
+    "onMounted",
+    "onUnmounted",
+    "onBeforeMount",
+    "onBeforeUnmount",
+    "onUpdated",
+    "onBeforeUpdate",
+    "watchEffect",
+    "defineProps",
+    "defineEmits",
+    "defineExpose",
+    "withDefaults"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "vue",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css",
+        "vue"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.vue",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css",
+        "vue"
+      ],
+      "ignoreRegExpList": [
+        "/<template[\\s\\S]*?<\\/template>/gi",
+        "/<style[\\s\\S]*?<\\/style>/gi"
+      ]
+    },
+    {
+      "filename": "**/nuxt.config.{js,ts}",
+      "words": ["nuxt", "nuxtjs"]
+    },
+    {
+      "filename": "**/vite.config.{js,ts}",
+      "words": ["vite"]
+    }
+  ]
+}

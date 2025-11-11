@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for SQL files",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "sql"
+  ],
+  "words": [
+    "varchar",
+    "bigint",
+    "smallint",
+    "tinyint",
+    "datetime",
+    "timestamp",
+    "autoincrement",
+    "primarykey",
+    "foreignkey",
+    "nullable",
+    "innodb",
+    "myisam",
+    "jsonb",
+    "uuid",
+    "serial",
+    "bigserial",
+    "boolean",
+    "postgis",
+    "spatial",
+    "indexing"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "sql,plsql,mysql,postgres,tsql",
+      "dictionaries": ["sql"],
+      "ignoreRegExpList": [
+        "/--.*$/gm",
+        "/\\/\\*[\\s\\S]*?\\*\\//g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.sql",
+      "dictionaries": ["sql"]
+    },
+    {
+      "filename": "**/migrations/**/*.sql",
+      "dictionaries": ["sql"]
+    },
+    {
+      "filename": "**/*.psql",
+      "dictionaries": ["sql", "postgres"]
+    }
+  ]
+}

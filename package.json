@@ -1,0 +1,49 @@
+{
+  "name": "@gfmio/config-cspell",
+  "version": "0.0.0",
+  "description": "Shareable CSpell configurations for consistent spell-checking across projects",
+  "main": "cspell.json",
+  "exports": {
+    ".": "./cspell.json",
+    "./typescript": "./typescript.json",
+    "./node": "./node.json",
+    "./react": "./react.json",
+    "./markdown": "./markdown.json"
+  },
+  "files": [
+    "*.json",
+    "dictionaries/**/*.txt",
+    "README.md"
+  ],
+  "keywords": [
+    "cspell",
+    "spell-checker",
+    "config",
+    "shareable-config",
+    "typescript",
+    "javascript",
+    "react",
+    "node",
+    "markdown"
+  ],
+  "author": "gfmio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfmio/config-cspell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gfmio/config-cspell/issues"
+  },
+  "homepage": "https://github.com/gfmio/config-cspell#readme",
+  "peerDependencies": {
+    "cspell": ">=8.0.0"
+  },
+  "devDependencies": {
+    "cspell": "^8.0.0"
+  },
+  "scripts": {
+    "test": "cspell --config cspell.json '**/*'",
+    "lint": "cspell lint --config cspell.json"
+  }
+}

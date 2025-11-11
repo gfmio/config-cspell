@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Java/Kotlin projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "java"
+  ],
+  "words": [
+    "maven",
+    "gradle",
+    "junit",
+    "testng",
+    "mockito",
+    "lombok",
+    "slf4j",
+    "logback",
+    "jackson",
+    "gson",
+    "hibernate",
+    "javax",
+    "jakarta",
+    "springboot",
+    "springframework",
+    "autowired",
+    "servlet",
+    "async",
+    "nullable",
+    "nonnull",
+    "override",
+    "deprecated",
+    "kotlin",
+    "kotlinx",
+    "coroutines",
+    "impl",
+    "util",
+    "utils"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "java,kotlin",
+      "dictionaries": ["java"],
+      "ignoreRegExpList": [
+        "/^\\s*\\/\\/.*$/gm",
+        "/import\\s+[\\w.]+/g",
+        "/package\\s+[\\w.]+/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.java",
+      "dictionaries": ["java"]
+    },
+    {
+      "filename": "**/*.kt",
+      "dictionaries": ["java"],
+      "words": ["kotlin", "kotlinx"]
+    },
+    {
+      "filename": "**/*.kts",
+      "dictionaries": ["java"],
+      "words": ["kotlin", "kotlinx"]
+    },
+    {
+      "filename": "**/pom.xml",
+      "enabled": true,
+      "words": ["maven", "artifactid", "groupid"]
+    },
+    {
+      "filename": "**/build.gradle*",
+      "enabled": true,
+      "words": ["gradle", "implementation", "testImplementation"]
+    },
+    {
+      "filename": "**/settings.gradle*",
+      "enabled": true
+    }
+  ],
+  "ignorePaths": [
+    "**/target/**",
+    "**/build/**",
+    "**/.gradle/**",
+    "**/*.class",
+    "**/*.jar",
+    "**/*.war"
+  ]
+}

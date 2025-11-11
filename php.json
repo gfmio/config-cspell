@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for PHP projects",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "php"
+  ],
+  "words": [
+    "laravel",
+    "symfony",
+    "composer",
+    "phpunit",
+    "phpstan",
+    "eloquent",
+    "artisan",
+    "middleware",
+    "phpcs",
+    "phpmd",
+    "psalm",
+    "doctrine",
+    "twig",
+    "guzzle",
+    "monolog",
+    "phpspec",
+    "behat",
+    "codeception",
+    "namespace",
+    "autoload",
+    "classmap"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "php",
+      "dictionaries": ["php"],
+      "ignoreRegExpList": [
+        "/^\\s*\\/\\/.*$/gm",
+        "/namespace\\s+[\\w\\\\]+/g",
+        "/use\\s+[\\w\\\\]+/g"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.php",
+      "dictionaries": ["php"]
+    },
+    {
+      "filename": "**/composer.json",
+      "enabled": true,
+      "words": ["composer", "autoload", "psr"]
+    },
+    {
+      "filename": "**/composer.lock",
+      "enabled": false
+    },
+    {
+      "filename": "**/phpunit.xml",
+      "enabled": true
+    }
+  ],
+  "ignorePaths": [
+    "**/vendor/**",
+    "**/.phpunit.cache/**"
+  ]
+}

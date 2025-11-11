@@ -1,0 +1,90 @@
+# Database Systems and Related Terms
+# One word per line
+
+# Relational Databases
+postgres
+postgresql
+mysql
+mariadb
+sqlite
+mssql
+sqlserver
+oracle
+cockroachdb
+timescaledb
+
+# NoSQL Databases
+mongodb
+couchdb
+couchbase
+cassandra
+scylla
+dynamodb
+firestore
+cosmosdb
+
+# Key-Value Stores
+redis
+memcached
+etcd
+consul
+
+# Search Engines
+elasticsearch
+opensearch
+solr
+meilisearch
+typesense
+algolia
+
+# Graph Databases
+neo4j
+neptune
+arangodb
+
+# Time Series
+influxdb
+timescaledb
+questdb
+
+# Vector Databases
+pinecone
+weaviate
+qdrant
+milvus
+chroma
+
+# Message Queues / Streaming
+kafka
+rabbitmq
+nats
+pulsar
+activemq
+zeromq
+redpanda
+
+# Database Tools & ORMs
+prisma
+drizzle
+typeorm
+sequelize
+knex
+kysely
+sqlalchemy
+alembic
+hibernate
+liquibase
+flyway
+mongoid
+mongoose
+
+# Database Terms
+sharding
+replication
+indexing
+normalization
+denormalization
+upsert
+jsonb
+fulltext
+geospatial

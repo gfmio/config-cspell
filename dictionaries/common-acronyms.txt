@@ -1,0 +1,88 @@
+# Common Technical Acronyms
+# One word per line, case-sensitive when appropriate
+
+# General
+API
+APIs
+CLI
+GUI
+SDK
+CDN
+DNS
+HTTP
+HTTPS
+SSL
+TLS
+TCP
+UDP
+IP
+URL
+URI
+UUID
+JSON
+XML
+HTML
+CSS
+SVG
+REST
+CRUD
+CORS
+JWT
+OAuth
+SMTP
+FTP
+SSH
+
+# Development
+IDE
+VSCode
+REPL
+WYSIWYG
+EOF
+EOL
+CRLF
+ASCII
+UTF
+
+# Architecture
+MVC
+MVVM
+SPA
+SSR
+SSG
+ISR
+CSR
+
+# Testing
+TDD
+BDD
+E2E
+
+# Databases
+RDBMS
+NoSQL
+SQL
+ORM
+
+# Infrastructure
+AWS
+GCP
+VM
+VPS
+VPC
+IAM
+
+# Performance
+TTL
+TTFB
+LCP
+FCP
+CLS
+FID
+
+# Other
+YAML
+TOML
+POSIX
+UNIX
+ANSI

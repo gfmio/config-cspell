@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "description": "Base CSpell configuration for all projects",
+  "dictionaries": [
+    "softwareTerms",
+    "companies",
+    "misc"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "common-tech-terms",
+      "path": "./dictionaries/common-tech-terms.txt",
+      "description": "Common technology terms used across projects"
+    },
+    {
+      "name": "common-acronyms",
+      "path": "./dictionaries/common-acronyms.txt",
+      "description": "Common technical acronyms"
+    }
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "out/**",
+    "coverage/**",
+    ".git/**",
+    ".vscode/**",
+    ".idea/**",
+    "*.min.*",
+    "*.map",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "*.log",
+    ".next/**",
+    ".nuxt/**",
+    ".cache/**",
+    "public/build/**",
+    "*.tsbuildinfo"
+  ],
+  "ignoreRegExpList": [
+    "/\\b[0-9a-f]{7,40}\\b/gi",
+    "/\\b[A-Z0-9_]{20,}\\b/g",
+    "/https?:\\/\\/[^\\s]+/g",
+    "/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g"
+  ],
+  "minWordLength": 3,
+  "allowCompoundWords": false,
+  "maxNumberOfProblems": 100,
+  "words": [],
+  "ignoreWords": [],
+  "flagWords": [
+    "hte",
+    "teh",
+    "recieve",
+    "seperate"
+  ]
+}

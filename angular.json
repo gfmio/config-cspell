@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for Angular projects",
+  "import": ["./typescript.json"],
+  "dictionaries": [
+    "html",
+    "css",
+    "fonts"
+  ],
+  "words": [
+    "ngrx",
+    "ngxs",
+    "rxjs",
+    "Injectable",
+    "Component",
+    "Directive",
+    "Pipe",
+    "NgModule",
+    "ViewChild",
+    "ViewChildren",
+    "ContentChild",
+    "ContentChildren",
+    "HostListener",
+    "HostBinding",
+    "Input",
+    "Output",
+    "EventEmitter",
+    "OnInit",
+    "OnDestroy",
+    "OnChanges",
+    "AfterViewInit",
+    "DoCheck",
+    "ngOnInit",
+    "ngOnDestroy",
+    "ngOnChanges",
+    "ngAfterViewInit",
+    "ngDoCheck",
+    "tsconfig",
+    "karma",
+    "jasmine",
+    "protractor"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "typescript",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.component.ts",
+      "words": ["Component", "Injectable"]
+    },
+    {
+      "filename": "**/*.component.html",
+      "dictionaries": ["html"]
+    },
+    {
+      "filename": "**/*.component.scss",
+      "dictionaries": ["css", "fonts"]
+    },
+    {
+      "filename": "**/*.component.css",
+      "dictionaries": ["css", "fonts"]
+    },
+    {
+      "filename": "**/*.service.ts",
+      "words": ["Injectable"]
+    },
+    {
+      "filename": "**/*.module.ts",
+      "words": ["NgModule"]
+    },
+    {
+      "filename": "**/*.directive.ts",
+      "words": ["Directive"]
+    },
+    {
+      "filename": "**/*.pipe.ts",
+      "words": ["Pipe"]
+    },
+    {
+      "filename": "**/angular.json",
+      "enabled": true
+    },
+    {
+      "filename": "**/karma.conf.js",
+      "words": ["karma"]
+    }
+  ]
+}

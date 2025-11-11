@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for React projects",
+  "import": ["./typescript.json"],
+  "dictionaries": [
+    "html",
+    "css",
+    "fonts"
+  ],
+  "words": [
+    "classname",
+    "classnames",
+    "onclick",
+    "onchange",
+    "onsubmit",
+    "useState",
+    "useEffect",
+    "useContext",
+    "useReducer",
+    "useCallback",
+    "useMemo",
+    "useRef",
+    "useLayoutEffect",
+    "useImperativeHandle",
+    "useDebugValue"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "typescriptreact,javascriptreact",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css"
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.{tsx,jsx}",
+      "dictionaries": [
+        "typescript",
+        "node",
+        "npm",
+        "html",
+        "css"
+      ]
+    },
+    {
+      "filename": "**/*.css",
+      "dictionaries": ["css", "fonts"]
+    },
+    {
+      "filename": "**/*.scss",
+      "dictionaries": ["css", "fonts"]
+    },
+    {
+      "filename": "**/*.module.{css,scss}",
+      "dictionaries": ["css", "fonts"]
+    }
+  ]
+}

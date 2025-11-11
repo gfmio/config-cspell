@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Recommended CSpell configuration for modern web development",
+  "import": [
+    "./typescript.json",
+    "./markdown.json"
+  ],
+  "comments": [
+    "This configuration provides a balanced setup for most modern web development projects.",
+    "It includes TypeScript/JavaScript support with comprehensive dictionaries and markdown handling.",
+    "For framework-specific projects, consider also importing the appropriate framework config:",
+    "  - React: @gfmio/config-cspell/react",
+    "  - Vue: @gfmio/config-cspell/vue",
+    "  - Angular: @gfmio/config-cspell/angular",
+    "  - Svelte: @gfmio/config-cspell/svelte",
+    "  - Next.js: @gfmio/config-cspell/nextjs"
+  ]
+}

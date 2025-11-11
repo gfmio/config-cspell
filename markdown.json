@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "CSpell configuration for documentation and markdown files",
+  "import": ["./cspell.json"],
+  "dictionaries": [
+    "en",
+    "en-US",
+    "misc"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "markdown",
+      "dictionaries": ["en", "en-US", "softwareTerms", "companies"]
+    }
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.md",
+      "dictionaries": ["en", "en-US", "softwareTerms", "companies"],
+      "ignoreRegExpList": [
+        "/```[\\s\\S]*?```/g",
+        "/`[^`]+`/g",
+        "/\\[.*?\\]\\(.*?\\)/g",
+        "/!\\[.*?\\]\\(.*?\\)/g",
+        "/<[^>]+>/g"
+      ]
+    },
+    {
+      "filename": "**/README.md",
+      "words": [
+        "npm",
+        "yarn",
+        "pnpm",
+        "github",
+        "gitlab",
+        "bitbucket"
+      ]
+    },
+    {
+      "filename": "**/CHANGELOG.md",
+      "ignoreRegExpList": [
+        "/\\[.*?\\]\\(.*?\\)/g",
+        "/\\b\\d+\\.\\d+\\.\\d+\\b/g",
+        "/^#+\\s+\\[?\\d/gm"
+      ]
+    },
+    {
+      "filename": "**/CONTRIBUTING.md",
+      "words": [
+        "github",
+        "gitlab",
+        "repo",
+        "repos"
+      ]
+    }
+  ]
+}

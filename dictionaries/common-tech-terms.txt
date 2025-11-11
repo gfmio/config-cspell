@@ -62,6 +62,17 @@ linter
 linting
 hotfix
 bugfix
+direnv
+devenv
+taskfile
+shellcheck
+shfmt
+markdownlint
+yamllint
+biomejs
+taplo
+nixos
+nixpkgs
 
 # Database
 postgres

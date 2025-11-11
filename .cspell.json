@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "description": "Local CSpell configuration for this project",
+  "import": ["./complete.json", "./personal.json"],
+  "words": [
+    "gfmio",
+    "cspell",
+    "shareable"
+  ]
+}

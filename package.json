@@ -5,6 +5,8 @@
   "main": "cspell.json",
   "exports": {
     ".": "./cspell.json",
+    "./recommended": "./recommended.json",
+    "./complete": "./complete.json",
     "./typescript": "./typescript.json",
     "./node": "./node.json",
     "./react": "./react.json",
